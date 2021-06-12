@@ -1,0 +1,32 @@
+.blog-info {
+  padding: 35px 30px;
+
+  height: 100vh;
+}
+
+.block-info__btn {
+  background-color: #1bc5ff;
+  margin-top: 10px;
+  cursor: pointer;
+
+  padding: 5px 15px;
+  margin-bottom: 40px;
+}
+
+.blog-info__inner {
+  display: flex;
+  flex-direction: column;
+}
+.blog-info__inner input {
+  width: 400px;
+  margin-bottom: 10px;
+}
+
+.blog-info__input--content {
+  height: 200px;
+}
+
+.blog-info__footer button:first-child {
+  margin-right: 80px;
+}
+

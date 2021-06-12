@@ -1,0 +1,28 @@
+<div class="blogs">
+  <h2>Блог</h2>
+  <div class="blogs__list">
+    <div class="blog" *ngFor="let blog of blogsList;index as blogId">
+      <h5>{{ blog.title }}</h5>
+      <div class="blog__content">
+        {{ blog.content }}
+      </div>
+      <button [routerLink]="['/blogs', blogId]" class="blog__btn">
+        Перейти
+      </button>
+    </div>
+  </div>
+  <a class="blog__add" (click)="toogleShowModal()">+ Добавить</a>
+
+  <div class="blogs__modal" *ngIf='showModal'>
+    <input type="text" [(ngModel)]='newTitle' placeholder="Enter title..." class="blogs__modal-input">
+    <input type="text" [(ngModel)]='newContent' placeholder="Enter content..." class="blogs__modal-input--content">
+    <button class="blog__btn" (click)="toogleShowModal()">
+      Отмена
+    </button>
+    <button class="blog__btn"
+            (click)="addNewBlog({title: newTitle, content: newContent })"
+    >
+      Добавить
+    </button>
+  </div>
+</div>
