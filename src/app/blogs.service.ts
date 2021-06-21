@@ -14,7 +14,6 @@ export class BlogsService {
     {title: 'Blog2', content: 'The second blog content'},
     {title: 'Blog3', content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, quas.'},
     {title: 'Blog4', content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'},
-    {title: 'Blog', content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'},
   ];
 
   getBlogs() {
@@ -26,7 +25,7 @@ export class BlogsService {
   }
 
   removeBlogById(blogId:number) {
-    return this.blogs = this.blogs.filter((blog, id) => id !== blogId);
+    return this.blogs.splice(blogId,1);
   }
 
   updateBlog(blogId: number, newBlog: blogInterface) {

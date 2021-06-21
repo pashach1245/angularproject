@@ -28,6 +28,9 @@
 .blog h5 {
   text-align: center;
   margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .blog__content {
@@ -36,6 +39,7 @@
   border: 1px solid #000000;
 
   background-color: #fff;
+  overflow: hidden;
 }
 
 .blog__btn {
