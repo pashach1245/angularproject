@@ -1,0 +1,9 @@
+<div *ngIf="blog" class="blog">
+  <h5>{{ blog.title }}</h5>
+  <div class="blog__content">
+    {{ blog.content }}
+  </div>
+  <button [routerLink]="['/blogs', blogId]" class="blog__btn">
+    Перейти
+  </button>
+</div>

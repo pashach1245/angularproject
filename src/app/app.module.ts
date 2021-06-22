@@ -6,6 +6,7 @@ import {FormsModule} from "@angular/forms";
 import { AppComponent } from './app.component';
 import { BlogsComponent } from './blogs/blogs.component';
 import { BlogInfoComponent } from './blog-info/blog-info.component';
+import { SingleBlogComponent } from './single-blog/single-blog.component';
 
 
 
@@ -13,7 +14,8 @@ import { BlogInfoComponent } from './blog-info/blog-info.component';
   declarations: [
     AppComponent,
     BlogsComponent,
-    BlogInfoComponent
+    BlogInfoComponent,
+    SingleBlogComponent
   ],
   imports: [
     BrowserModule,

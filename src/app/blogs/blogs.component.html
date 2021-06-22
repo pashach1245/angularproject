@@ -1,15 +1,7 @@
 <div class="blogs">
   <h2>Блог</h2>
   <div class="blogs__list">
-    <div class="blog" *ngFor="let blog of blogsList;index as blogId">
-      <h5>{{ blog.title }}</h5>
-      <div class="blog__content">
-        {{ blog.content }}
-      </div>
-      <button [routerLink]="['/blogs', blogId]" class="blog__btn">
-        Перейти
-      </button>
-    </div>
+    <app-single-blog *ngFor="let blog of blogsList;index as blogId" [blog]="blog" [blogId]="blogId"></app-single-blog>
   </div>
   <a class="blog__add" (click)="toogleShowModal()">+ Добавить</a>
 
